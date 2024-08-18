@@ -16,6 +16,6 @@ public class StudentManagementApplication {
 
 	@GetMapping("/hello")
 	public String hello() {
-		return "Hello, World! All Abroad!!";
+		return "Hello, World! All Abroad!!←ちょっとふざけました…";
 	}
 }
