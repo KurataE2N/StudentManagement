@@ -1,4 +1,4 @@
-package raisetech.StudentManagement;
+package raisetech.StudentManagement.data;
 
 import java.sql.Timestamp;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 public class StudentsCourses {
   private String id;
   private String studentId;
-  private String courseName;
-  private Timestamp startDate;
-  private Timestamp endDate;
+  private String course;
+  private Timestamp classopen;
+  private Timestamp classcomp;
 }
