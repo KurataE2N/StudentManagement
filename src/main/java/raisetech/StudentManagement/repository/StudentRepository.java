@@ -25,8 +25,8 @@ public interface StudentRepository {
   List<StudentsCourses> searchStudentsCourses(String studentId);
 
   @Insert(
-      "INSERT INTO students(name, furigana, nickname, email, region, age, gender, remark, is_deleted) "
-      + "VALUES(#{name}, #{furigana}, #{nickname}, #{email}, #{region}, #{age}, #{gender}, #{remark}, false)")
+      "INSERT INTO students(name, furigana, nickname, email, region, age, gender, remarks, is_deleted) "
+      + "VALUES(#{name}, #{furigana}, #{nickname}, #{email}, #{region}, #{age}, #{gender}, #{remarks}, false)")
   @Options(useGeneratedKeys = true, keyProperty = "id")
   void registerStudent(Student student);
 
@@ -36,7 +36,7 @@ public interface StudentRepository {
   void registerStudentsCourses(StudentsCourses studentsCourses);
 
   @Update("UPDATE students SET(name = #{name}, furigana = #{furigana}, nickname = #{nickname}, "
-          + "email = #{email}, region = #{region}, age = #{age}, gender = #{gender}, remark = #{remark}, is_deleted = #{isDeleted}) WHERE id = #{id}")
+          + "email = #{email}, region = #{region}, age = #{age}, gender = #{gender}, remarks = #{remarks}, is_deleted = #{isDeleted}) WHERE id = #{id}")
   void updateStudent(Student student);
 
   @Update("UPDATE students_courses SET(course = #{course}) WHERE id = #{id}")
