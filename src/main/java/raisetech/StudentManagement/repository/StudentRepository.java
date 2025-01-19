@@ -35,10 +35,10 @@ public interface StudentRepository {
   @Options(useGeneratedKeys = true, keyProperty = "id")
   void registerStudentsCourses(StudentsCourses studentsCourses);
 
-  @Update("UPDATE students SET(name = #{name}, furigana = #{furigana}, nickname = #{nickname}, "
-          + "email = #{email}, region = #{region}, age = #{age}, gender = #{gender}, remarks = #{remarks}, is_deleted = #{isDeleted}) WHERE id = #{id}")
+  @Update("UPDATE students SET name = #{name}, furigana = #{furigana}, nickname = #{nickname}, "
+          + "email = #{email}, region = #{region}, age = #{age}, gender = #{gender}, remarks = #{remarks}, is_deleted = #{isDeleted} WHERE id = #{id}")
   void updateStudent(Student student);
 
-  @Update("UPDATE students_courses SET(course = #{course}) WHERE id = #{id}")
+  @Update("UPDATE students_courses SET course = #{course} WHERE id = #{id}")
   void updateStudentsCourses(StudentsCourses studentsCourses);
 }
